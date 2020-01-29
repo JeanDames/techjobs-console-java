@@ -1,10 +1,7 @@
 package org.launchcode.techjobs.console;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by LaunchCode
@@ -44,6 +41,7 @@ public class TechJobs {
                 } else {
 
                     ArrayList<String> results = JobData.findAll(columnChoice);
+                    Collections.sort(results);
 
                     System.out.println("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
 
@@ -128,5 +126,4 @@ public class TechJobs {
         }
         }
 
-//        System.out.println("printJobs is not implemented yet");
 }
